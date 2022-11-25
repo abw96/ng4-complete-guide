@@ -20,7 +20,7 @@ import { ShoppingEditComponent } from "./shopping-edit/shopping-edit.component";
         SharedModule,
         FormsModule,
         RouterModule.forChild([{
-                path: 'shopping-list',
+                path: '',
                 component: ShoppingListComponent,
                 canActivate: [AuthGuard],
         }])

@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CoreModule } from './core.module';
 import { AppComponent } from './app.component';
-import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { RecipesModule } from './recipes/recipes.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ShoppingListModule } from './shopping-list/shopping-list.module';
+import { LoggingService } from './logging.service';
 
 @NgModule({
   declarations: [
@@ -17,18 +15,15 @@ import { ShoppingListModule } from './shopping-list/shopping-list.module';
     HeaderComponent,
   ],
   imports: [
-    AuthModule,
     CoreModule,
     FormsModule,
     SharedModule,
     BrowserModule,
-    RecipesModule,
     AppRoutingModule,
     HttpClientModule,
-    ShoppingListModule,
     ReactiveFormsModule,
   ],
-  providers: [CoreModule],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
